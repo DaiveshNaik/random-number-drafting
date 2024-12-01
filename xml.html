@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <style>
+       body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9; /* Light background for contrast */
+}
+
+h1 {
+    color: #333; /* Darker text for better readability */
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 15px 20px; /* Padding for buttons */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Font size */
+    margin: 10px 5px; /* Spacing between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.display-box {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #555; /* Slightly lighter text for contrast */
+}
+
+.columns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.column {
+    width: 20%;
+    text-align: left;
+    background-color: #fff; /* White background for columns */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside columns */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.column-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Darker title text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+    .column {
+        width: 90%; /* Full width for columns */
+        margin: 0 auto; /* Center columns */
+        margin-bottom: 20px; /* Spacing between columns */
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>Random Drafting Number Generator</h1>
+    <button id="generateButton">Generate</button>
+    <button id="resetButton" style="display: none;">Reset</button>
+    <div class="display-box" id="result"></div>
+    <div id="totalDisplayed">Total Numbers Displayed: 0</div> <!-- New element for total displayed -->
+
+    <div class="columns">
+        <div class="column" id="redColumn">
+            <div class="column-title">Red</div>
+        </div>
+        <div class="column" id="blueColumn">
+            <div class="column-title">Blue</div>
+        </div>
+        <div class="column" id="greenColumn">
+            <div class="column-title">Green</div>
+        </div>
+        <div class="column" id="yellowColumn">
+            <div class="column-title">Yellow</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Make sure the file name is correct -->
+</body>
+</html>
